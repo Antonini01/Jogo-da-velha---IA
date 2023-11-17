@@ -88,7 +88,7 @@ def lanceBot():
         if espacoVazio(chave):
             tabuleiro[chave] = bot
             pontuacao = minimax(tabuleiro, 0, False)
-            tabuleiro[chave] = ' ' # queremos reverter o que fizemos para poder jogar o próximo lance. jogaremos o lance mais tarde
+            tabuleiro[chave] = ' ' 
             if pontuacao > melhorPontuacao:
                 melhorPontuacao = pontuacao
                 melhorLance = chave
@@ -108,11 +108,11 @@ def minimax(tabuleiro, profundidade, maximizar):
             if espacoVazio(chave):
                 tabuleiro[chave] = bot
                 pontuacao = minimax(tabuleiro, 0, False)
-                tabuleiro[chave] = ' ' # queremos reverter o que fizemos para poder jogar o próximo lance. jogaremos o lance mais tarde
+                tabuleiro[chave] = ' ' 
                 if pontuacao > melhorPontuacao:
                     melhorPontuacao = pontuacao
         return melhorPontuacao
-    else: # bot inimigo do bot acima. Irão jogar os dois bots sozinhos
+    else: # bot inimigo do bot acima
         melhorPontuacao = 1000
         for chave in tabuleiro.keys():
             if espacoVazio(chave):
