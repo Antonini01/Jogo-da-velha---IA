@@ -45,14 +45,14 @@ def checarEmpate():
     return True
 
 def checarVitoria(letr):
-    return ((tabuleiro[1] == tabuleiro[2] == tabuleiro[3] == letr) or # se isso acontecer, é True
+    return ((tabuleiro[1] == tabuleiro[2] == tabuleiro[3] == letr) or 
             (tabuleiro[4] == tabuleiro[5] == tabuleiro[6] == letr) or
             (tabuleiro[7] == tabuleiro[8] == tabuleiro[9] == letr) or
             (tabuleiro[1] == tabuleiro[4] == tabuleiro[7] == letr) or
             (tabuleiro[2] == tabuleiro[5] == tabuleiro[8] == letr) or
             (tabuleiro[3] == tabuleiro[6] == tabuleiro[9] == letr) or
             (tabuleiro[1] == tabuleiro[5] == tabuleiro[9] == letr) or
-            (tabuleiro[3] == tabuleiro[5] == tabuleiro[7] == letr)) # se nada acontecer, retorna False
+            (tabuleiro[3] == tabuleiro[5] == tabuleiro[7] == letr))
 
 def inserirLetra(letra, posicao):
     if espacoVazio(posicao):
